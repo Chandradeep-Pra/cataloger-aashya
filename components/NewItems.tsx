@@ -59,11 +59,11 @@ const NewItems = () => {
     <span className="font-krona-one md:text-2xl text-textPrimary pl-4">
       New Items
     </span>
-    <div className="flex overflow-x-auto md:overflow-x-visible flex-nowrap md:flex-wrap no-scrollbar mt-3 pb-2 mx-auto">
+    <div className="flex overflow-x-auto md:overflow-x-visible  flex-wrap no-scrollbar mt-3 pb-2 mx-auto">
       {newItemsData.map((it) => (
         <div
           key={it.id}
-          className="flex flex-col items-center group cursor-pointer md:mt-8 shrink-0 px-4 mx-auto relative"
+          className="flex flex-col items-center group cursor-pointer md:mt-8 mt-6 shrink-0 px-4 mx-auto relative"
         >
           {/* Heart Icon */}
           <div className="absolute md:top-4 md:right-4 top-1/2 left-1/2 md:left-auto transform md:transform-none -translate-x-1/2 translate-y-12 md:-translate-x-4 md:translate-y-0 z-10">

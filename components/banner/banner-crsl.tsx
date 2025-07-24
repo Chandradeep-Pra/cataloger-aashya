@@ -117,7 +117,7 @@ const BannerCarousel = () => {
   return (
     <div className="relative w-full overflow-hidden">
       <Carousel
-        opts={{ loop: true }}
+        opts={{ loop: true, }}
         setApi={(api) => {
           emblaRef.current = api;
           api.on('select', () => setCurrent(api.selectedScrollSnap()));
@@ -125,7 +125,7 @@ const BannerCarousel = () => {
       >
         <CarouselContent>
           {banners.map((banner, index) => (
-            <CarouselItem key={index} className="w-full">
+            <CarouselItem key={index} className="w-full will-change-transform transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
               <Banner bannerData={banner} />
             </CarouselItem>
           ))}

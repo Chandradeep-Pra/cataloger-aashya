@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Krona_One, Lora } from "next/font/google";
 import "./globals.css";
+import TNav from "@/components/nav/TNav";
+import { BNav } from "@/components/nav/BNav";
 
 
 
@@ -35,7 +37,9 @@ export default function RootLayout({
       <body
         className={` ${inter.variable} ${kronaOne.variable} ${lora.variable} antialiased`}
       >
+        <TNav />
         {children}
+        <BNav />
       </body>
     </html>
   );
