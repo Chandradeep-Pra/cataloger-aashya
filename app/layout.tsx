@@ -4,23 +4,23 @@ import "./globals.css";
 import TNav from "@/components/nav/TNav";
 import { BNav } from "@/components/nav/BNav";
 
-
-
 const inter = Inter({
   variable: "--font-inter",
   weight: ["100","200","300","400","500","600","700","800"],
+  subsets: ["latin"],   // ✅ added
 });
 
 const kronaOne = Krona_One({
   variable: "--font-krona-one",
   weight: "400",
+  subsets: ["latin"],   // ✅ added
 });
 
 const lora = Lora({
   variable: "--font-lora",
   weight: ["400", "500", "600", "700"],
-  // subsets: ["latin"],
-})
+  subsets: ["latin"],   // ✅ added
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${inter.variable} ${kronaOne.variable} ${lora.variable} antialiased`}
+        className={`${inter.variable} ${kronaOne.variable} ${lora.variable} antialiased`}
       >
         <TNav />
         {children}

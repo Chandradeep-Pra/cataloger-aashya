@@ -2,7 +2,7 @@ import { BannerContent } from "@/types/banner-content";
 
 export const banners: BannerContent[] = [
 {
-  imageAlighn: 'left',
+  imageAlign: 'left',
   frontImgUrl:
     '/desktop-landing-img.png',
   backImgUrl:
@@ -14,7 +14,7 @@ export const banners: BannerContent[] = [
   bannerTextClr: '#D7C085',
 },
 {
-  imageAlighn: 'right',
+  imageAlign: 'right',
   frontImgUrl:
     '/desktop-landing-img-2.png',
   backImgUrl:

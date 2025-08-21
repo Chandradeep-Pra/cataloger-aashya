@@ -92,7 +92,7 @@ const Banner = ({ bannerData }: { bannerData: BannerContent }) => {
         />
         
         {/* Content */}
-        <div className={`flex relative ${bannerData.imageAlighn === 'left' ? 'flex-row-reverse' : 'flex-row'} p-6 md:p-12`}>
+        <div className={`flex relative ${bannerData.imageAlign === 'left' ? 'flex-row-reverse' : 'flex-row'} p-6 md:p-12`}>
           {/* Image */}
           <Image
             src={bannerData.frontImgUrl}
@@ -105,7 +105,7 @@ const Banner = ({ bannerData }: { bannerData: BannerContent }) => {
           {/* Text */}
           <div
             className={`md:text-left md:space-y-4 absolute md:relative md:block flex-1 z-20 h-full ${
-              bannerData.imageAlighn === 'left' ? 'order-1' : 'order-2'
+              bannerData.imageAlign === 'left' ? 'order-1' : 'order-2'
             }`}
             style={{ color: bannerData.bannerTextClr }}
           >

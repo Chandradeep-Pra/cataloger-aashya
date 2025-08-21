@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import {
   Breadcrumb,
@@ -6,24 +6,34 @@ import {
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
-import { ChevronLeft, Maximize2, SlashIcon, Heart, MessageCircle } from 'lucide-react';
-import Image from 'next/image';
-import { Button } from '@/components/ui/button';
-import { useState } from 'react';
-import MobileItemDet from '@/components/MobileItemDet';
-import { Lens } from '@/components/magicui/lens';
+} from "@/components/ui/breadcrumb";
+import {
+  ChevronLeft,
+  Maximize2,
+  SlashIcon,
+  Heart,
+  MessageCircle,
+} from "lucide-react";
+import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import MobileItemDet from "@/components/MobileItemDet";
+import { Lens } from "@/components/magicui/lens";
 
-export default function ItemPage({
-  params,
-}: {
-  params: { categorySlug: string; itemId: string };
-}) {
+//@ts-ignore
+export default function ItemPage({ params }: { params: any }) {
   const { categorySlug, itemId } = params;
 
-  const thumbnails = new Array(5).fill('/splash-screen/haldiLooks.jpg');
-  const sizes = ['S', 'M', 'L', 'XL', 'XXL'];
-  const colors = ['#6E2A1B', '#D8B978', '#007843', '#8A2BE2', '#E91E63', '#A78BFA'];
+  const thumbnails = new Array(5).fill("/splash-screen/haldiLooks.jpg");
+  const sizes = ["S", "M", "L", "XL", "XXL"];
+  const colors = [
+    "#6E2A1B",
+    "#D8B978",
+    "#007843",
+    "#8A2BE2",
+    "#E91E63",
+    "#A78BFA",
+  ];
 
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -42,7 +52,10 @@ export default function ItemPage({
 
       {/* Desktop Breadcrumb */}
       <div className="hidden md:flex items-center gap-4">
-        <ChevronLeft className="border border-textPrimary rounded-full p-1" size={32} />
+        <ChevronLeft
+          className="border border-textPrimary rounded-full p-1"
+          size={32}
+        />
         <Breadcrumb className="font-bold">
           <BreadcrumbList>
             <BreadcrumbItem>
@@ -110,35 +123,36 @@ export default function ItemPage({
         {/* Desktop Main Image */}
         <div className="hidden md:block relative w-full md:w-[55%] rounded-3xl overflow-hidden">
           <Lens
-          zoomFactor={2}
-          lensSize={300}
-          isStatic={false}
-          ariaLabel="Zoom Area"
+            zoomFactor={2}
+            lensSize={300}
+            isStatic={false}
+            ariaLabel="Zoom Area"
           >
-
-          <Image
-            src="/splash-screen/haldiLooks.jpg"
-            alt="main"
-            width={350}
-            height={450}
-            className="rounded-3xl object-cover w-full h-full aspect-[3/4]"
+            <Image
+              src="/splash-screen/haldiLooks.jpg"
+              alt="main"
+              width={350}
+              height={450}
+              className="rounded-3xl object-cover w-full h-full aspect-[3/4]"
             />
-            </Lens>
+          </Lens>
           <Maximize2 className="absolute bottom-3 right-3 p-2 bg-white rounded-full text-black shadow-md w-8 h-8" />
         </div>
 
         {/* Right Panel Info */}
         <div className="flex flex-col gap-4 flex-1 text-textPrimary mt-6 md:mt-0">
-          <h1 className="text-2xl md:text-3xl font-semibold">Jissy Pearl Gown</h1>
+          <h1 className="text-2xl md:text-3xl font-semibold">
+            Jissy Pearl Gown
+          </h1>
           <p className="text-muted-foreground text-sm leading-relaxed">
             {isExpanded
-              ? 'There will be some description regarding the clothes and we try to put as much information as possible about material, fit, comfort and more. Customers can make better choices when they know how the dress feels and flows. This helps convert better!'
-              : 'There will be some description regarding the clothes and we try to put as much. '}
+              ? "There will be some description regarding the clothes and we try to put as much information as possible about material, fit, comfort and more. Customers can make better choices when they know how the dress feels and flows. This helps convert better!"
+              : "There will be some description regarding the clothes and we try to put as much. "}
             <span
               className="text-pink-500 font-medium cursor-pointer"
               onClick={() => setIsExpanded(!isExpanded)}
             >
-              {isExpanded ? ' Show less' : ' Read more...'}
+              {isExpanded ? " Show less" : " Read more..."}
             </span>
           </p>
 

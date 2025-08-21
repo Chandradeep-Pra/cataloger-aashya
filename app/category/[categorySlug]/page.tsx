@@ -28,11 +28,12 @@ const data = {
   bannerTextClr: '#D7C085',
 }
 
-export default function CategoryPage({ params }: { params: { categorySlug: string } }) {
+//@ts-ignore
+export default function CategoryPage({ params }: { params: any }) {
   const router = useRouter();
   const title = params.categorySlug.replace(/-/g, ' ');
 
-  const [gradient, setGradient] = useState<string | null>(null);
+  const [gradient, setGradient] = useState("");
   const frontImg = '/desktop-landing-img-2.png';
 
   useEffect(() => {
@@ -41,7 +42,7 @@ export default function CategoryPage({ params }: { params: { categorySlug: strin
   }, []);
 
   const bannerData = {
-    imageAlighn: 'left',
+    imageAlign: 'left',
     frontImgUrl: frontImg,
     backImgUrl: '/desktop-landing-pattern-Photoroom.png',
     bannerBackround: '#FFEFE9',

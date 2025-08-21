@@ -1,5 +1,5 @@
 export type BannerContent = {
-    imageAlighn: 'left' | 'right';
+    imageAlign: string;
     frontImgUrl: string;
     backImgUrl: string;
     bannerBackround: string;

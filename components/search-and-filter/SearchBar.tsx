@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { BorderlessInput, Input } from '@/components/ui/input';
+import { BorderlessInput} from '@/components/ui/input';
 import { Search } from 'lucide-react';
 
 const SearchBar = () => {
